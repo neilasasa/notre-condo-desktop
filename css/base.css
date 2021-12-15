@@ -1,0 +1,27 @@
+:root{
+    /* --moss-green: #99BFBB; */ 
+    --moss-green: #8DB0AC;
+    --moss-green-opacity: rgba(153, 191, 187, 0.2);
+    --dark-green: #345956;
+    --olive-green: #59522D;
+    --beige-green: #A6A380;
+    --aqua: #80D9C7;
+    --light-gray: #edf0ee;
+    --white: #ffffff;
+    --light-brown: #D9C791;
+    --orange: #ff5511;
+
+    --inter: 'Inter', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+.contain{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+body{
+    font-family: var(--inter);
+    background-color: var(--white);
+    margin: 3rem;
+}

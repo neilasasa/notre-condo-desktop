@@ -1,5 +1,5 @@
-:root{
-    /* --moss-green: #99BFBB; */ 
+:root {
+    /* --moss-green: #99BFBB; */
     --moss-green: #8DB0AC;
     --moss-green-opacity: rgba(153, 191, 187, 0.2);
     --dark-green: #345956;
@@ -15,13 +15,13 @@
     --montserrat: 'Montserrat', sans-serif;
 }
 
-.contain{
+.contain {
     padding-left: 2%;
     padding-right: 2%;
 }
 
-body{
+body {
     font-family: var(--inter);
     background-color: var(--white);
-    margin: 3rem;
+    margin: 2rem;
 }

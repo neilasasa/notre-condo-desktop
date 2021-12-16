@@ -35,10 +35,11 @@
     border-radius: 20px;
     height: 40px;    
     width: 100%;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: var(--dark-green);
+    color: var(--white);
     box-sizing: border-box;
     justify-content: center;
     align-items: center;

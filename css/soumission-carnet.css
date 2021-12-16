@@ -14,7 +14,7 @@
 
 .soumission-carnet__title {
     margin-top: 3rem;
-    font-size: 40px;
+    font-size: 2.5rem;
     letter-spacing: 0.3rem;
 }
 
@@ -35,12 +35,13 @@
     padding-bottom: 0.5rem;
 }
 
-.soumission-carnet__type--title {
-    font-size: 20px;
+.soumission-carnet__type--subtitle{
+    font-size: 1.5rem;
     color: var(--olive-green);
     margin-left: 1rem;
     margin-bottom: 0;
-    align-self: center;
+    align-self: center;    
+    letter-spacing: 0.3rem;
 }
 
 .soumission-carnet__type--year {
@@ -86,8 +87,13 @@
     background-color: var(--beige-green);
 }
 
+.soumission-carnet__result--title{
+    font-size: 1.25rem;
+    font-weight: bold;    
+}
+
 .soumission-carnet__result--description {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: justify;
     text-justify: inter-word;
 }

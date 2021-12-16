@@ -11,6 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/menu.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,7 @@
 </head>
 
 <body>
-    <header class="accueil__menu contain">
+    <!-- <header class="accueil__menu contain">
         <div class="accueil__menu--logo">
             <img src="img/logo4.png" alt="Notre Condo" class="accueil__menu--img">
         </div>
@@ -32,65 +33,92 @@
             <a href="#" class="accueil__menu--item">Carnet</a>
             <a href="#" class="accueil__menu--item">Mon Unité</a>
         </nav>
-    </header>
+    </header> -->
 
     <main>
-        <div class="message-fond">
-            <section class="message">
-                <h3 class="accueil__subtitle">Message de vos administrateurs</h3>
-                <div class="accueil__box">
-                    <p class="accueil__text">The standard chunk of Lorem Ipsum used since the
-                        1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
-                        Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form,
-                        accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                </div>
+        <div class="menu-message-sondage-babillard">
+            <section class="menu contain">
+                <img src="img/logo4.png" alt="Notre Condo" />
+                <nav class="menu__nav">
+                    <a href="#" class="menu__nav--item">Accueil</a>
+                    <a href="#" class="menu__nav--item">Soummissions</a>
+                    <a href="#" class="menu__nav--item">Documents</a>
+                    <a href="#" class="menu__nav--item">Carnet</a>
+                    <a href="#" class="menu__nav--item">Mon Unité</a>
+                </nav>
+
+                <section class="fond">
+                    <div class="fond__circle">
+                        <h3 class="accueil__subtitle fond-subtitle">Fond de prevoyance</h3>
+                        <p class="accueil__text">12,800 $</p>
+                    </div>
+                </section>
             </section>
 
-            <section class="fond">
-                <h3 class="accueil__subtitle">Fond de prevoyance</h3>
-                <div class="accueil__box">
-                    <p class="accueil__text">The standard chunk of Lorem Ipsum used since the
-                        1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
-                        Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form,
-                        accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            <div class="message-sondage-babillard">
+                <div class="message-sondage">
+                    <section class="message">
+                        <h3 class="accueil__subtitle message_subtitle">Message</h3>
+                        <div class="accueil__box  message__box">
+                            <p class="accueil__text message__text">The standard chunk of Lorem Ipsum used since the
+                                1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
+                                Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form,
+                                accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                        </div>
+                    </section>
+
+                    <section class="sondage">
+                        <h3 class="accueil__subtitle sondage_subtitle">Sondage</h3>
+                        <div class="accueil__box sondage__box">
+                            <form action="" class="sondage__form">
+                                <div class="accueil__box accueil__text sondage__question">
+                                    <p class="accueil__text">The standard chunk of Lorem Ipsum used since the
+                                        1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33
+                                        from
+                                        "de
+                                        Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+                                        original
+                                        form,
+                                        accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                                </div>
+
+                                <div class="sondage__form--rep">
+                                    <div>
+                                        <input type="radio" id="rep1" name="rep-sondage" value="Oui">
+                                        <label for="rep1" class="sondage__label">Oui</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="rep2" name="rep-sondage" value="Non">
+                                        <label for="rep2" class="sondage__label">Non</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="rep3" name="rep-sondage" value="NA">
+                                        <label for="rep3" class="sondage__label">N'est pas applicable</label>
+                                    </div>
+                                    <input type="button" value="Soumettre" class="sondage__submit">
+                            </form>
+                        </div>
+                    </section>
                 </div>
-            </section>
+
+                <section class="babillard">
+                    <h3 class="accueil__subtitle babillard__subtitle">Babillard</h3>
+                    <div class="accueil__box babillard__box">
+                        <form action="" class="babillard__new">
+                            <textarea name="" id="" cols="30" rows="10" class="babillard__new--text"></textarea>
+                            <input type="button" value="" class="babillard submit">
+                        </form>
+                        <div class="babillard__post">
+                            <div class="babillard__post--box"></div>
+                            <div class="babillard__post--box"></div>
+                            <div class="babillard__post--box"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
 
-        <section class="sondage">
-            <h3 class="accueil__subtitle">Sondage</h3>
-            <div class="accueil__box">
-                <form action="" class="sondage__form">
-                    <div class="accueil__box accueil__text sondage__question">
-                        <p class="accueil__text">The standard chunk of Lorem Ipsum used since the
-                            1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
-                            Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form,
-                            accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                    </div>
 
-                    <div class="sondage__form--rep">
-                        <div>
-                            <input type="radio" id="rep1" name="rep-sondage" value="Oui">
-                            <label for="rep1" class="sondage__label">Oui</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="rep2" name="rep-sondage" value="Non">
-                            <label for="rep2" class="sondage__label">Non</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="rep3" name="rep-sondage" value="NA">
-                            <label for="rep3" class="sondage__label">N'est pas applicable</label>
-                        </div>
-                        <input type="button" value="Soumettre" class="sondage__submit">
-                </form>
-            </div>
-            </div>
-
-        </section>
-
-        <section class="babillard">
-
-        </section>
     </main>
 
 </body>

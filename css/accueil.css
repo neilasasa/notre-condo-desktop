@@ -1,3 +1,4 @@
+/* CODE FOR HEADER */
 .accueil__menu {
     display: flex;
     flex-direction: row;
@@ -24,14 +25,122 @@
     width: 100%;
 }
 
-.accueil__menu--item{
+.accueil__menu--item {
     font-size: 16px;
-    color: var(--dark-green);    
+    color: var(--dark-green);
     text-decoration: none;
 }
 
-.accueil__menu--item:hover{
+.accueil__menu--item:hover {
     font-size: 20px;
-    color: var(--olive-green);    
+    color: var(--olive-green);
     text-decoration: none;
+}
+
+/* CODE FOR MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    margin: 2.5rem;
+}
+
+.accueil__subtitle {
+    font-size: 20px;
+    color: var(--olive-green);
+    margin-bottom: 0;
+    align-self: left;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+}
+
+.accueil__box {
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid var(--beige-green);
+    padding: 1rem;
+    background-color: var(--moss-green-opacity);
+}
+
+.accueil__text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* CODE FOR MESSAGE & FOND & SONDAGE */
+.message-fond {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    margin-bottom: 3rem;
+}
+
+.message,
+.fond,
+.sondage {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-right: 2rem;
+}
+
+/* CODE FOR SONDAGE */
+.sondage__form {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sondage__question{
+    width: 100%;
+}
+
+.sondage__form--rep {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;    
+    margin-left: 1.75rem;
+}
+
+.sondage__form--rep div{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-content: center;
+    height: 2.5rem;
+}
+
+input:checked + label {
+    font-size: 20px;
+    color: var(--olive-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sondage__label{
+    display: flex;
+    margin-left: 2.75rem;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+.sondage__submit{
+    width: 50%;
+    align-self: center;
+    margin-top: 1rem;
+    font-size: 20px;
+    border-radius: 8px;
+    border-style: none;
+    background-color: var(--dark-green);
+    color: var(--white);
+    font-weight: bold;
 }

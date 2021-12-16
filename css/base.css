@@ -25,3 +25,7 @@ body {
     background-color: var(--white);
     margin: 2rem;
 }
+
+label{
+    display: none;
+}

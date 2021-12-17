@@ -88,6 +88,10 @@ main {
     margin-bottom: 0;
 }
 
+.title__header {
+    border-bottom: 1px solid var(--olive-green);
+}
+
 /* CODE FOR FOND */
 .fond {
     display: flex;
@@ -257,7 +261,7 @@ input:checked+label {
     height: 150px;
 }
 
-.babillard__new--text{
+.babillard__new--text {
     background-color: var(--white);
 }
 
@@ -278,7 +282,7 @@ input:checked+label {
     margin-bottom: 2rem;
 }
 
-.form--buttons{
+.form--buttons {
     display: flex;
     align-self: center;
 }
@@ -294,7 +298,7 @@ input:checked+label {
     border-radius: 10rem;
 }
 
-.button_like-dislike:hover{
+.button_like-dislike:hover {
     cursor: pointer;
 }
 
@@ -302,6 +306,6 @@ input:checked+label {
     background-image: url("../img/hand-thumbs-up.svg");
 }
 
-#dislike{
+#dislike {
     background-image: url("../img/hand-thumbs-down.svg");
 }

@@ -41,6 +41,7 @@ label {
 
 .title__header h1{
     width: 100%;
+    color: var(--olive-green);
 }
 
 

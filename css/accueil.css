@@ -55,7 +55,7 @@ main {
     align-content: flex-start;
 }
 
-.message-sondage-babillard{
+.message-sondage-babillard {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -105,20 +105,18 @@ main {
     background-color: var(--moss-green-opacity);
     width: 100%;
     border-radius: 10rem;
-    border: 8px solid var(--beige-green);
+    border: 4px double var(--beige-green);
 }
 
 .fond__circle p {
     text-align: center;
-    margin-bottom: 1rem;    
+    margin-bottom: 1rem;
     color: var(--olive-green);
-    font-weight: bold;
 }
 
 .fond-subtitle {
     display: flex;
     font-size: 1rem;
-    font-weight: bold;
     text-align: center;
     margin-top: 1rem;
     color: var(--olive-green);
@@ -131,10 +129,10 @@ main {
     box-sizing: border-box;
     justify-content: space-between;
     align-content: flex-start;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
-.message{
+.message {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -147,9 +145,10 @@ main {
     height: 200px;
 }
 
-.message__text{
+.message__text {
     overflow: scroll;
     overflow-x: hidden;
+    padding-right: 1.5rem;
 }
 
 /* CODE FOR SONDAGE */
@@ -177,6 +176,10 @@ main {
     width: 100%;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+.sondage__text {
+    padding-right: 1rem;
 }
 
 .sondage__form--rep {
@@ -211,32 +214,94 @@ input:checked+label {
     align-self: center;
 }
 
-.sondage__submit {
+.sondage__submit,
+.babillard__submit {
     width: 75%;
     align-self: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     border-radius: 8px;
     border-style: none;
-    background-color: var(--dark-green);
-    color: var(--white);
+    background-color: var(--beige-green);
+    color: var(--olive-green);
     font-weight: bold;
 }
 
 /* CODE FOR BABILLARD */
-.babillard{
+.babillard {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
 
-.babillard__subtitle{
-    margin-top: 3rem;
+.babillard__subtitle {
+    margin-top: 2rem;
 }
 
-.babillard__box{
+.babillard__box {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+.babillard__new {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.babillard__new--text,
+.babillard__post--text {
+    height: 150px;
+}
+
+.babillard__new--text{
+    background-color: var(--white);
+}
+
+.babillard__post {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.babillard__post--form {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+.form--buttons{
+    display: flex;
+    align-self: center;
+}
+
+.button_like-dislike {
+    height: 3rem;
+    width: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 1rem;
+    background-color: var(--moss-green);
+    border-style: none;
+    border-radius: 10rem;
+}
+
+.button_like-dislike:hover{
+    cursor: pointer;
+}
+
+#like {
+    background-image: url("../img/hand-thumbs-up.svg");
+}
+
+#dislike{
+    background-image: url("../img/hand-thumbs-down.svg");
 }

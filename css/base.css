@@ -31,6 +31,54 @@ label {
     display: none;
 }
 
+.title__header{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.title__header h1{
+    width: 100%;
+}
+
+
+.title__anchor{
+    width: 20%;
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;    
+    justify-content: right;
+}
+
+.title__anchor:hover{
+    text-decoration: none; 
+    color: var(--olive-green);    
+    font-weight: bold;
+}
+
+.title__anchor p{
+    margin-bottom: 0;
+    align-self: center;
+    text-decoration: none;
+    color: var(--dark-green); 
+}
+
+.title__anchor p:hover{    
+    color: var(--olive-green); 
+    font-weight: bold;
+}
+
+.title__anchor img{
+    height: 32px;
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
 footer{
     display: flex;
     flex-direction: column;

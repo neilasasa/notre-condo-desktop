@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/soumission-carnet.css">
+    <link rel="stylesheet" href="css/documents-unite.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat&display=swap"
+        rel="stylesheet">
+
+    <title>Mon Unite</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="menu contain">
+            <img src="img/logo4.png" alt="Notre Condo" />
+            <nav class="menu__nav">
+                <a href="accueil.html" class="menu__nav--item">Accueil</a>
+                <a href="soumission.html" class="menu__nav--item">Soummissions</a>
+                <a href="documents.html" class="menu__nav--item">Documents</a>
+                <a href="carnet.html" class="menu__nav--item">Carnet</a>
+                <a href="unite.html" class="menu__nav--item">Mon Unité</a>
+            </nav>
+        </section>
+
+        <section class="soumission-carnet contain">
+            <h1 class="soumission-carnet__title">Mon unité</h1>
+
+            <div class="soumission-carnet__result unite__box" id="carnet-result-exterieur">
+                <form class="soumission-carnet__form">
+                    <h2 class="soumission-carnet__type--subtitle">Année en cours</h2>
+                    <label for="choose__year"></label>
+                    <select name="year" id="choose__year" class="form-control soumission-carnet__type--year">
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </form>
+
+                <table class="unite__table">
+                    <tr class="unite__table-header">
+                        <th>Mois</th>
+                        <th>État</th>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">janvier</td>
+                        <td class="unite__cell" id="janvier">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">fevrier</td>
+                        <td class="unite__cell" id="fevrier">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">mars</td>
+                        <td class="unite__cell" id="mars">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">avril</td>
+                        <td class="unite__cell" id="avril">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">mai</td>
+                        <td class="unite__cell" id="mai">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">juin</td>
+                        <td class="unite__cell" id="juin">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">juillet</td>
+                        <td class="unite__cell" id="juillet">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">aout</td>
+                        <td class="unite__cell" id="aout">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">septembre</td>
+                        <td class="unite__cell" id="septembre">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">octobre</td>
+                        <td class="unite__cell" id="octobre">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">novembre</td>
+                        <td class="unite__cell" id="novembre">payé</td>
+                    </tr>
+                    <tr class="unite__row">
+                        <td class="unite__cell">decembre</td>
+                        <td class="unite__cell" id="decembre">payé</td>
+                    </tr>
+                </table>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h1 class="footer__text">Notre-Condo - Système de gestion de copropriété</h1>
+        <h3 class="footer__text"><a href="#">A.N.P.G.</a></h3>
+    </footer>
+</body>
+
+</html>

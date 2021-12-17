@@ -1,0 +1,88 @@
+.documents__box {
+    margin-bottom: 2rem;
+    margin-top: 1.75rem;
+}
+
+.documents__item {
+    height: 450px;
+    border: 1.5px solid var(--olive-green);
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: var(--moss-green-opacity);
+    color: var(--dark-green);
+    justify-content: space-around;
+}
+
+.documents__item h3 {
+    letter-spacing: 0.2rem;
+}
+
+.documents__item p {
+    text-align: center;
+    align-self: start;
+}
+
+.documents__proces {
+    height: 40px;
+    padding: 0.5rem;
+    border: 1px solid var(--olive-green);
+    border-radius: 4px;
+}
+
+
+/* CODE FOR MON UNITE */
+.unite__box {
+    flex-direction: column;
+    margin-bottom: 2rem;
+    margin-top: 1.75rem;
+}
+
+.unite__table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    width: 100%;
+    background-color: var(--moss-green-opacity);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.unite__table-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--olive-green);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.unite__table-header th {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.6rem;
+}
+
+.unite__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--olive-green);
+}
+
+.unite__row td {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;    
+    text-align: center;
+}

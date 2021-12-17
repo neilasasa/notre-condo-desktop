@@ -1,0 +1,74 @@
+body {
+    background: url("../img/background.jpg") var(--light-gray) repeat;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 600px;
+    padding: 3rem 5rem;
+    background: linear-gradient(var(--white), var(--light-gray));
+    border: 7px double var(--olive-green);
+    border-radius: 30px;
+}
+
+.login__img--box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-content: flex-start;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--olive-green);
+}
+
+.login__img {
+    width: 30%;
+    align-self: center;
+}
+
+.login__title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    color: var(--olive-green);
+    padding-bottom: 1rem;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 100%;
+}
+
+#email,
+#password {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid var(--olive-green);
+    font-family: var(--montserrat);    
+    letter-spacing: 0.2rem;
+}
+
+#login__button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    height: 45px;
+    border-radius: 4px;
+    border: 1px solid var(--olive-green);
+    font-family: var(--montserrat);
+    font-size: 1rem;
+    background-color: var(--light-brown);    
+    letter-spacing: 0.5rem;
+}

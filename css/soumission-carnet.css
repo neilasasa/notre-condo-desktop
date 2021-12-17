@@ -18,20 +18,14 @@
     letter-spacing: 0.3rem;
 }
 
-.soumission-carnet__form {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.soumission-carnet__type--header {
+.soumission-carnet__form {    
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;    
     width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid var(--beige-green);
-    box-sizing: border-box;
+    margin-top: 4rem;
     padding-bottom: 0.5rem;
 }
 
@@ -98,6 +92,6 @@
     text-justify: inter-word;
 }
 
-.soumission-carnet__form--bottom{
+.soumission-carnet__result--bottom{
     margin-bottom: 4rem;
 }

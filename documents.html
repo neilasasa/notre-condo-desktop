@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/soumission-carnet.css">
+    <link rel="stylesheet" href="css/documents.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat&display=swap"
+        rel="stylesheet">
+
+    <title>Documents</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="menu contain">
+            <img src="img/logo4.png" alt="Notre Condo" />
+            <nav class="menu__nav">
+                <a href="accueil.html" class="menu__nav--item">Accueil</a>
+                <a href="soumission.html" class="menu__nav--item">Soummissions</a>
+                <a href="documents.html" class="menu__nav--item">Documents</a>
+                <a href="carnet.html" class="menu__nav--item">Carnet</a>
+                <a href="unite.html" class="menu__nav--item">Mon Unité</a>
+            </nav>
+        </section>
+
+        <section class="soumission-carnet contain">
+            <h1 class="soumission-carnet__title">Afficher les documents</h1>
+
+            <div class="soumission-carnet__result documents__box" id="carnet-result-exterieur">
+                <div class="soumission-carnet__result--item documents__item">
+                    <h3 class="soumission-carnet__result--title">Procès Verbaux</h3>
+                    <p class="soumission-carnet__result--description">Accédez aux procès verbaux des mois et des années
+                        précédents ici</p>
+                    <select class="documents__proces">
+                        <option value="procesVerbaux2021">Procès Verbaux 2021</option>
+                        <option value="procesVerbaux2020">Procès Verbaux 2020</option>
+                        <option value="procesVerbaux2019">Procès Verbaux 2019</option>
+                    </select>
+                </div>
+
+                <div class="soumission-carnet__result--item documents__item">
+                    <h3 class="soumission-carnet__result--title">Budget Antécédants</h3>
+                    <p class="soumission-carnet__result--description">Accédez aux budgets antécédants ici</p>
+                    <select class="documents__proces">
+                        <option value="budget2021">Budget 2021</option>
+                        <option value="budget2020">Budget 2020</option>
+                        <option value="budget2019">Budget 2019</option>
+                    </select>
+                </div>
+
+                <div class="soumission-carnet__result--item documents__item">
+                    <h3 class="soumission-carnet__result--title">Avis de convocation</h3>
+                    <p class="soumission-carnet__result--description">Consultez les avis de convocation ici</p>
+                    <select class="documents__proces">
+                        <option value="avis2021">Avis 2021</option>
+                        <option value="avis2020">Avis 2020</option>
+                        <option value="avis2019">Avis 2019</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -69,7 +69,7 @@
                 </div>
             </section>
         </section>
-         
+
         <div class="message-sondage-babillard">
             <div class="title__header">
                 <h1 class="soumission-carnet__title">Accueil</h1>
@@ -93,7 +93,7 @@
                 <section class="sondage">
                     <h3 class="accueil__subtitle sondage_subtitle">Sondage</h3>
                     <div class="accueil__box sondage__box">
-                        <form action="" class="sondage__form">
+                        <form class="sondage__form" id="sondage">
                             <div class="accueil__box accueil__text sondage__question">
                                 <p class="accueil__text sondage__text">The standard chunk of Lorem Ipsum used since
                                     the
@@ -108,18 +108,19 @@
 
                             <div class="sondage__form--rep">
                                 <div>
-                                    <input type="radio" id="rep1" name="rep1" value="Oui">
+                                    <input type="radio" id="rep1" name="rep" value="oui">
                                     <label for="rep1" class="sondage__label">Oui</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="rep2" name="rep2" value="Non">
+                                    <input type="radio" id="rep2" name="rep" value="non">
                                     <label for="rep2" class="sondage__label">Non</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="rep3" name="rep3" value="NA">
+                                    <input type="radio" id="rep3" name="rep" value="NA">
                                     <label for="rep3" class="sondage__label">N'est pas applicable</label>
                                 </div>
-                                <input type="button" value="Soumettre" class="sondage__submit">
+                                <input type="button" value="Soumettre" class="sondage__submit" id="sondage-button">
+                            </div>
                         </form>
                     </div>
                 </section>

@@ -10,7 +10,7 @@ button.addEventListener('click', (event) => {
     if (email === "admin@admin.com" && password === "admin") {
         alert("Connexion bien réussie.");
         window.location.href="accueil.html";
-        // location.reload();
+        error.classList.remove('error');        
     } else {
         const error = document.getElementById('error-message');
         error.classList.add('error');

@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    height: 600px;
+    height: 620px;
     padding: 3rem 5rem;
     background: linear-gradient(var(--white), var(--light-gray));
     border: 7px double var(--olive-green);

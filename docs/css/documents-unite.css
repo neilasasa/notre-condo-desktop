@@ -10,7 +10,7 @@
     padding: 2rem;
     background-color: var(--moss-green-opacity);
     color: var(--dark-green);
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .documents__item h3 {
@@ -29,6 +29,18 @@
     border-radius: 4px;
 }
 
+.document__submit {
+    width: 75%;
+    align-self: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border-style: none;
+    background-color: var(--beige-green);
+    color: var(--olive-green);
+    font-weight: bold;
+}
 
 /* CODE FOR MON UNITE */
 .unite__box {
@@ -83,6 +95,6 @@
 .unite__row td {
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem;    
+    padding: 1rem;
     text-align: center;
 }

@@ -1,23 +1,63 @@
-let unite=[
-    {Mois: "Janvier", Etat:"Payé" },
-    { Mois: "Janvier", Etat:"Payé" },
-    { Mois: "Février", Etat:"Payé" },
-    { Mois: "Mars", Etat:"Payé" },
-    { Mois: "Avril", Etat:"Payé" },
-    { Mois: "Mai", Etat:"Payé" },
-    { Mois: "Juin", Etat:"Payé" },
-    { Mois: "Juillet", Etat:"Payé" },
-    { Mois: "Aout", Etat:"Payé" },
-    { Mois: "Septembre", Etat:"Payé" },
-    { Mois: "Octobre", Etat:"Payé" },
-    { Mois: "Novembre", Etat:"Payé" },
-    { Mois: "Décembre", Etat:"Payé" }
+let unite = [{
+        Mois: "Janvier",
+        État: "Payé"
+    },
+    {
+        Mois: "Janvier",
+        État: "Payé"
+    },
+    {
+        Mois: "Février",
+        État: "Payé"
+    },
+    {
+        Mois: "Mars",
+        État: "Payé"
+    },
+    {
+        Mois: "Avril",
+        État: "Payé"
+    },
+    {
+        Mois: "Mai",
+        État: "Payé"
+    },
+    {
+        Mois: "Juin",
+        État: "Payé"
+    },
+    {
+        Mois: "Juillet",
+        État: "Payé"
+    },
+    {
+        Mois: "Aout",
+        État: "Payé"
+    },
+    {
+        Mois: "Septembre",
+        État: "Payé"
+    },
+    {
+        Mois: "Octobre",
+        État: "Payé"
+    },
+    {
+        Mois: "Novembre",
+        État: "Payé"
+    },
+    {
+        Mois: "Décembre",
+        État: "Payé"
+    }
 ];
 
-function generateTableHead(table, data){
-    let thead=table.createTHead();
+function generateTableHead(table, data) {
+    let thead = table.createTHead();
     let row = thead.insertRow();
-    for (let key of data){
+    row.classList.add('unite__table-header');
+
+    for (let key of data) {
         let th = document.createElement("th");
         let text = document.createTextNode(key);
         th.appendChild(text);
@@ -25,14 +65,14 @@ function generateTableHead(table, data){
     }
 }
 
-
-
-function generateTable(table, data){
-    for(let element of data){
+function generateTable(table, data) {
+    for (let element of data) {
         let row = table.insertRow();
-        for(key in element){
-            let cell=row.insertCell();
+        row.classList.add('unite__row');
+        for (key in element) {
+            let cell = row.insertCell();
             let text = document.createTextNode(element[key]);
+            cell.classList.add('unite__cell');
             cell.appendChild(text);
         }
     }

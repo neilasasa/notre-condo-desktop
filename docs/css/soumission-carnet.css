@@ -1,3 +1,7 @@
+.soumission-carnet__menu {
+    padding: 0;
+}
+
 .soumission-carnet {
     display: flex;
     flex-direction: column;
@@ -7,46 +11,43 @@
     color: var(--olive-green);
     border-radius: 8px;
     margin-top: 2rem;
-    height: fit-content;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding: 3%;
 }
 
 .soumission-carnet__title {
-    margin-top: 3rem;
-    font-size: 2.5rem;
-    letter-spacing: 0.3rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: var(--olive-green);
+    align-self: end;
 }
 
-.soumission-carnet__form {    
+.soumission-carnet__form {
     display: flex;
     flex-direction: row;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid var(--beige-green);
-    margin-top: 4rem;
     padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
 }
 
-.soumission-carnet__type--subtitle{
-    font-size: 1.5rem;
+.soumission-carnet__type--subtitle {
+    font-size: 1.25rem;
     color: var(--olive-green);
-    margin-left: 1rem;
     margin-bottom: 0;
-    align-self: center;    
-    letter-spacing: 0.3rem;
+    align-self: center;
 }
 
 .soumission-carnet__type--year {
-    width: 15%;
+    width: 30%;
     border-color: var(--beige-green);
     border-radius: 20px;
 }
 
 .soumission-carnet__result {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
@@ -56,11 +57,51 @@
 .soumission-carnet__result--item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-content: flex-start;
     box-sizing: border-box;
-    width: 30%;
     text-align: center;
+    margin-bottom: 2rem;
+    overflow-y: auto;
+    justify-content: flex-start;
+}
+
+.soumission-carnet__result--title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.2rem;
+}
+
+.soumissionExt__post,
+.soumissionInt__post,
+.soumissionCompt__post,
+.entretienMaj__post,
+.entretienMin__post,
+.entretienPrev__post,
+.assemble__post--text,
+.budget__post--text {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-content: flex-start;
+}
+
+.soumission__post--text,
+.assemble__post--text,
+.budget__post--text {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.assemble__post--text p,
+.budget__post--text p{
+    margin-bottom: 0;
+}
+
+.soumission__post--text a {
+    color: var(--olive-green);
+    display: block;
 }
 
 .soumission-carnet__result--button {
@@ -73,25 +114,59 @@
     height: 53px;
     padding: 1rem;
     opacity: 0.7;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     align-self: center;
 }
 
-.soumission-carnet__result--button:hover{
-    background-color: var(--beige-green);
+.soumission-carnet__result--button a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: right;
+    align-content: flex-end;        
 }
 
-.soumission-carnet__result--title{
-    font-size: 1.25rem;
-    font-weight: bold;    
-}
 
-.soumission-carnet__result--description {
-    font-size: 1rem;
-    text-align: justify;
-    text-justify: inter-word;
-}
+@media screen and (min-width: 1440px) {
+    .soumission-carnet__menu {
+        width: 30%;
+    }
 
-.soumission-carnet__result--bottom{
-    margin-bottom: 4rem;
+    .soumission-carnet {
+        margin-left: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .soumission-carnet__result--item {
+        width: 100%;
+        margin: 0.5rem;
+        height: fit-content;
+    }
+
+    .soumission-carnet__title {
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .soumission-carnet__form {
+        margin-top: 4rem;
+    }
+
+    .soumission-carnet__type--subtitle {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .soumission-carnet__type--year {
+        width: 15%;
+    }
+
+    .soumission-carnet__result {
+        flex-direction: row;
+    }
+
 }

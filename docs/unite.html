@@ -12,22 +12,36 @@
 
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/accueil.css">
     <link rel="stylesheet" href="./css/soumission-carnet.css">
     <link rel="stylesheet" href="./css/documents-unite.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat&family=Red+Hat+Display&display=swap"
+    rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8e9fae6df2.js" crossorigin="anonymous"></script>
 
     <title>Mon Unite</title>
 </head>
 
 <body>
     <main class="main">
-        <section class="menu contain">
-            <img src="./img/logo-notrecondo.png" alt="Notre Condo" />
-            <nav class="menu__nav">
+        <section class="menu soumission-carnet__menu">
+            <img src="./img/logo-notrecondo.png" alt="Notre Condo" class="logo" />
+            <div class="menu__mobile">
+                <div class="notre-condo">Notre Condo</div>
+                <div class="menu__mobile-buttons">
+                    <a href="index.html" class="logout" onclick="logout();">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                    <button class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <nav class="menu__nav" id="menu__nav">
                 <a href="accueil.html" class="menu__nav--item">Accueil</a>
                 <a href="soumission.html" class="menu__nav--item">Soummissions</a>
                 <a href="documents.html" class="menu__nav--item">Documents</a>
@@ -36,17 +50,17 @@
             </nav>
         </section>
 
-        <section class="soumission-carnet contain">
+        <section class="soumission-carnet">
             <div class="title__header">
                 <h1 class="soumission-carnet__title">Mon unité</h1>
-                <a href="index.html" class="title__anchor">
+                <a href="index.html" class="title__anchor" onclick="logout();">
                     <p>Deconnexion</p>
-                    <img src="./img/logout.svg" alt="Deconnexion">
+                    <img src="./img/logout.svg" alt="Deconnexion" class="logout-img">
                 </a>
             </div>
-            <div class="soumission-carnet__result unite__box" id="carnet-result-exterieur">
+            <div class="unite__box" id="carnet-result-exterieur">
                 <form class="soumission-carnet__form">
-                    <h2 class="soumission-carnet__type--subtitle">Année en cours</h2>
+                    <h2 class="soumission-carnet__type--subtitle">Année</h2>
                     <label for="choose__year"></label>
                     <select name="year" id="choose__year" class="form-control soumission-carnet__type--year">
                         <option value="2021">2021</option>
@@ -54,6 +68,11 @@
                         <option value="2019">2019</option>
                     </select>
                 </form>
+
+                <div class="infoCopro">
+                    <span id="noUnite"></span>
+                    <span id="mensualite"></span>
+                </div>
 
                 <table class="unite__table">
                     <!-- La table est générée dans le javascript pour l'instant-->
@@ -69,5 +88,6 @@
     </footer>
 </body>
 <script src="js/unite.js"></script>
+<script src="js/menu.js"></script>
 
 </html>

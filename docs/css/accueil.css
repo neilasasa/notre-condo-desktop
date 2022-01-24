@@ -1,66 +1,13 @@
-/* CODE FOR HEADER */
-/* .accueil__menu {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-content: center;
-    width: 100%;
-}
-
-.accueil__menu--logo {
-    display: flex;
-    justify-content: center;
-    width: 30%;
-}
-
-.accueil__menu--img {
-    width: 40%;
-}
-
-.accueil__menu--nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-self: center;
-    width: 100%;
-}
-
-.accueil__menu--item {
-    font-size: 1rem;
-    color: var(--dark-green);
-    text-decoration: none;
-}
-
-.accueil__menu--item:hover {
-    font-size: 1.25rem;
-    color: var(--olive-green);
-    text-decoration: none;
-} */
-
-/* CODE FOR MAIN */
 main {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     justify-content: space-evenly;
     align-content: flex-start;
-    margin: 1rem;
 }
 
-.menu-message-sondage-babillard {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-content: flex-start;
-}
-
-.message-sondage-babillard {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-content: flex-start;
+.accueil {
+    padding: 0;
 }
 
 .accueil__subtitle {
@@ -75,237 +22,61 @@ main {
 .accueil__box {
     display: flex;
     box-sizing: border-box;
+    width: 100%;
     border-radius: 8px;
     border: 1px solid var(--beige-green);
     padding: 1rem;
     background-color: var(--moss-green-opacity);
     justify-content: center;
+    margin-bottom: 0.5rem;
 }
 
 .accueil__text {
     text-align: justify;
     text-justify: inter-word;
     margin-bottom: 0;
-}
-
-.title__header {
-    border-bottom: 1px solid var(--olive-green);
-}
-
-/* CODE FOR FOND */
-.fond {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    margin-top: 4rem;
-}
-
-.fond__circle {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    justify-content: space-around;
-    align-content: center;
-    background-color: var(--moss-green-opacity);
     width: 100%;
-    border-radius: 10rem;
-    border: 4px double var(--beige-green);
 }
 
-.fond__circle p {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--olive-green);
-}
-
-.fond-subtitle {
+.message-sondage-babillard {
     display: flex;
-    font-size: 1rem;
-    text-align: center;
-    margin: 0.5rem;
-    color: var(--olive-green);
-}
-
-/* CODE FOR MESSAGE */
-.message-sondage {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-sizing: border-box;
     justify-content: space-between;
     align-content: flex-start;
+    width: 100%;
     margin-top: 2rem;
 }
 
-.message {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    margin-right: 2rem;
-    width: 50%;
-}
+@media screen and (min-width: 1440px) {
+    main {
+        flex-direction: row;
+        margin: 1rem;
+    }
 
-.message__box {
-    display: flex;
-    height: 200px;
-}
+    .message-sondage-babillard {
+        margin-top: 3rem;
+    }
 
-.message__text {
-    overflow: scroll;
-    overflow-x: hidden;
-    padding-right: 1.5rem;
-}
+    .accueil {
+        display: flex;
+        box-sizing: border-box;
+    }
 
-/* CODE FOR SONDAGE */
-.sondage {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 100%;
-}
+    .accueil__subtitle {
+        font-size: 1rem;
+        color: var(--olive-green);
+        margin-bottom: 1rem;
+        font-weight: bold;
+        letter-spacing: 0.3rem;
+        box-sizing: border-box;
+    }
 
-.sondage__box {
-    display: flex;
-    height: 200px;
-}
+    .accueil__text {
+        text-align: justify;
+        text-justify: inter-word;
+        margin-bottom: 0;
+        width: 100%;
+    }
 
-.sondage__form {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.sondage__question {
-    width: 100%;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
-.sondage__text {
-    padding-right: 1rem;
-}
-
-.sondage__form--rep {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 100%;
-    margin-left: 1.75rem;
-}
-
-.sondage__form--rep div {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    align-content: center;
-    height: 2.5rem;
-}
-
-input:checked+label {
-    color: var(--olive-green);
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid var(--olive-green);
-    border-radius: 4px;
-    padding: 3%;
-}
-
-.sondage__label {
-    display: flex;
-    margin-left: 2.75rem;
-    margin-bottom: 0;
-    align-self: center;
-}
-
-.sondage__submit,
-.babillard__submit {
-    width: 75%;
-    align-self: center;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    border-style: none;
-    background-color: var(--beige-green);
-    color: var(--olive-green);
-    font-weight: bold;
-}
-
-/* CODE FOR BABILLARD */
-.babillard {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.babillard__subtitle {
-    margin-top: 2rem;
-}
-
-.babillard__box {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.babillard__new {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-}
-
-.babillard__new--text,
-.babillard__post--text {
-    height: 150px;
-}
-
-.babillard__new--text {
-    background-color: var(--white);
-}
-
-.babillard__post {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0.5rem 0.5rem 0.5rem 1rem;
-}
-
-.babillard__post--form {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-content: center;
-    margin-bottom: 2rem;
-}
-
-.form--buttons {
-    display: flex;
-    align-self: center;
-}
-
-.button_like-dislike {
-    height: 3rem;
-    width: 3rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: 1rem;
-    background-color: var(--moss-green);
-    border-style: none;
-    border-radius: 10rem;
-}
-
-.button_like-dislike:hover {
-    cursor: pointer;
-}
-
-#like {
-    background-image: url("../img/hand-thumbs-up.svg");
-}
-
-#dislike {
-    background-image: url("../img/hand-thumbs-down.svg");
 }

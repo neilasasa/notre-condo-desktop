@@ -1,0 +1,57 @@
+.fond {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 2.5rem;
+}
+
+.fond__circle {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-content: center;
+    background-color: var(--moss-green-opacity);
+    width: 100%;
+    border-radius: 2rem;
+    border: 4px double var(--beige-green);
+}
+
+.fond-subtitle {
+    display: flex;
+    font-size: 1rem;
+    align-self: center;
+    margin-top: 1rem;
+    color: var(--olive-green);
+}
+
+.fond__montant,
+.fond__date {
+    text-align: center;
+    color: var(--olive-green);
+}
+
+.fond__montant {
+    font-size: 1rem;
+}
+
+.fond__date {
+    font-size: 0.7rem;
+}
+
+
+@media screen and (min-width: 1440px) {
+    .fond__circle {
+        border-radius: 10rem;
+        text-align: center;
+        color: var(--olive-green);
+    }
+
+    .fond__montant {
+        font-size: 1.25rem;
+    }
+
+    .fond__date {
+        font-size: 0.75rem;
+    }
+}

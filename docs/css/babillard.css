@@ -1,0 +1,136 @@
+.babillard {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.babillard__subtitle {
+    margin-top: 2rem;
+}
+
+.babillard__box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.babillard__new {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.babillard__new--text {
+    height: 155px;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.babillard__post--text {
+    height: 120px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-right: 1.5rem;
+    overflow-y: auto;
+    overflow-wrap: normal;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 0;
+
+}
+
+.babillard__post--date {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+}
+
+.babillard__post {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;    
+    width: 100%;
+}
+
+.babillard__post--form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form--buttons {
+    display: flex;
+    align-self: center;
+    margin-top: 0.5rem;
+}
+
+.buttonsLikeDislike{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.txtLikeDislike{
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.button_like-dislike {
+    height: 3rem;
+    width: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 1rem;
+    background-color: var(--moss-green);
+    border-style: none;
+    border-radius: 10rem;
+}
+
+.button_like-dislike:hover {
+    cursor: pointer;
+}
+
+.like {
+    background-image: url("../img/hand-thumbs-up.svg");
+}
+
+.dislike {
+    background-image: url("../img/hand-thumbs-down.svg");
+}
+
+
+@media screen and (min-width: 1440px) {
+    .babillard__box {
+        flex-direction: row;
+    }
+
+    .babillard__new {
+        width: 50%;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .babillard__post {
+        margin: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+
+    .babillard__post--form {
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .form--buttons {
+        margin-top: 0;
+    }
+}

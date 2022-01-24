@@ -1,84 +1,78 @@
-let unite = [{
-        Mois: "Janvier",
-        État: "Payé"
-    },
-    {
-        Mois: "Janvier",
-        État: "Payé"
-    },
-    {
-        Mois: "Février",
-        État: "Payé"
-    },
-    {
-        Mois: "Mars",
-        État: "Payé"
-    },
-    {
-        Mois: "Avril",
-        État: "Payé"
-    },
-    {
-        Mois: "Mai",
-        État: "Payé"
-    },
-    {
-        Mois: "Juin",
-        État: "Payé"
-    },
-    {
-        Mois: "Juillet",
-        État: "Payé"
-    },
-    {
-        Mois: "Aout",
-        État: "Payé"
-    },
-    {
-        Mois: "Septembre",
-        État: "Payé"
-    },
-    {
-        Mois: "Octobre",
-        État: "Payé"
-    },
-    {
-        Mois: "Novembre",
-        État: "Payé"
-    },
-    {
-        Mois: "Décembre",
-        État: "Payé"
-    }
-];
+let uniteList = [];
+let montantDu;
 
-function generateTableHead(table, data) {
-    let thead = table.createTHead();
-    let row = thead.insertRow();
-    row.classList.add('unite__table-header');
+let formater = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+});
 
-    for (let key of data) {
-        let th = document.createElement("th");
-        let text = document.createTextNode(key);
-        th.appendChild(text);
-        row.appendChild(th);
-    }
-}
+const coproId = JSON.parse(localStorage.getItem('coproId'));
+const uniteId = JSON.parse(localStorage.getItem('uniteId'));
+const uniteNo = JSON.parse(localStorage.getItem('uniteNo'));
 
-function generateTable(table, data) {
-    for (let element of data) {
-        let row = table.insertRow();
-        row.classList.add('unite__row');
-        for (key in element) {
-            let cell = row.insertCell();
-            let text = document.createTextNode(element[key]);
-            cell.classList.add('unite__cell');
-            cell.appendChild(text);
-        }
-    }
-}
+let selectYear = document.getElementById("choose__year").value;
 
-let table = document.querySelector("table");
-let data = Object.keys(unite[0]);
-generateTable(table, unite);
-generateTableHead(table, data);
+fetch('http://localhost:8080/api/condos/montant/' + uniteNo + '/' + coproId) //retourne le montant par mois calculer par le wervice web
+    .then(function (response) {
+        response.json().then(function (json) {
+            montantDu = json;
+            document.getElementById("noUnite").innerHTML = "Unité " + uniteNo;
+            document.getElementById("mensualite").innerHTML = "Mensualité " + formater.format(montantDu);
+        })
+    })
+
+fetch('http://localhost:8080/api/condos/paiement/' + selectYear + '/' + uniteId) //retourne un array de la table paiement
+    .then(function (response) {
+        response.json().then(function (json) {
+            const table = document.querySelector(".unite__table");
+
+            let tableRowHead = document.createElement('tr');
+            tableRowHead.classList.add('unite__table-header');
+            table.appendChild(tableRowHead);
+
+            let tableHeadPaye = document.createElement('th');
+            let tableHeadPayeDate = document.createElement('th');
+            let tableHeadPayeDiference = document.createElement('th');
+
+            tableHeadPayeDate.innerHTML = "Date";
+            tableHeadPaye.innerHTML = "Payé";
+            tableHeadPayeDiference.innerHTML = "Solde";
+
+            tableRowHead.appendChild(tableHeadPayeDate);
+            tableRowHead.appendChild(tableHeadPaye);
+            tableRowHead.appendChild(tableHeadPayeDiference);
+
+            for (const obj of json) {
+                const montantPaye = obj.montant;
+                const datePaye = obj.date;
+                let solde = montantDu - montantPaye;
+
+
+                let tableRow = document.createElement('tr');
+                tableRow.classList.add('unite__row');
+                table.appendChild(tableRow);
+
+                let tableCellPaye = document.createElement('td');
+                let tableCellPayeDate = document.createElement('td');
+                let tableCellPayeDiference = document.createElement('td');
+
+                let textPayeDate = document.createTextNode(datePaye);
+                let textPaye = document.createTextNode(formater.format(montantPaye));
+                let textPayeDiference = document.createTextNode(formater.format(montantDu - montantPaye));
+
+                // if (solde > 0){
+                //     tableRow.classList.add('attention');
+                // } else{
+                //     tableRow.classList.remove('attention');
+                // }
+
+                tableCellPayeDate.appendChild(textPayeDate);
+                tableCellPaye.appendChild(textPaye);
+                tableCellPayeDiference.appendChild(textPayeDiference);
+
+                tableRow.appendChild(tableCellPayeDate);
+                tableRow.appendChild(tableCellPaye);
+                tableRow.appendChild(tableCellPayeDiference);
+            }
+        })
+    })

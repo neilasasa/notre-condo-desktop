@@ -1,34 +1,116 @@
+function clearScreen() {
+    emptyAssemble.innerHTML = "";
+    emptyBudget.innerHTML = "";
+}
 
-// SOLUTION TEMPORAIRE EN ATTENDANT D'ETRE CONNECTé AU BACKEND ------------------------------
+function afficheAssemble() {
+    let selectAnnee = document.getElementById("choose__year").value;
+    fetch('http://localhost:8080/api/condos/archives/' + selectAnnee)
+        .then(function (responseServer) {
+            return responseServer.json();
+        })
+        .then(function (messageServer) {
+            for (const obj of messageServer) {
+                const proces = document.querySelector(".assemble__post");
+                const procesID = obj.id;
+                const procesTitre = obj.titre;
+                const procesDate = obj.anneeBudgetaire;
+                const procesDocument = obj.document;
+                const procesCopro = obj.copro_id;
+                const procesType = obj.type;
 
-function affichePV(){
-    let selectPV = document.getElementById("pvSelect").value;
-    if (selectPV ="procesVerbaux2021"){
-        window.open("img/proces_verbal.pdf");
+                if (procesType == "assemblee") {
+                    let textBox = document.createElement('div');
+                    textBox.classList.add('accueil__box');
+                    proces.appendChild(textBox);
 
-    }else{
-        alert("En construction")
-    }
+                    let text = document.createElement('div');
+                    text.classList.add('assemble__post--text');
+
+                    let textTitre = document.createElement('p');
+                    textTitre.innerHTML = procesTitre;
+
+                    let textDate = document.createElement('p');
+                    textDate.innerHTML = 'Date: ' + procesDate;
+
+                    text.appendChild(textTitre);
+                    text.appendChild(textDate);
+
+                    let img = document.createElement('img');
+                    img.src = "./img/icon-download.svg";
+                    let linkText = document.createTextNode(procesDocument);
+                    img.alt = linkText;
+
+                    let a = document.createElement('a');
+                    a.classList.add('title__anchor');
+                    a.href = "archives/" + procesDocument;
+                    a.target = "_blank";
+                    a.rel = "noopener noreferrer";
+                    a.appendChild(img);
+
+                    let box = document.createElement('div');
+                    box.classList.add('soumission-carnet__result--button');
+                    box.appendChild(a);
+                    text.appendChild(box);
+
+                    textBox.appendChild(text);
+                }
+            }
+        })
 }
 
 function afficheBudget() {
-    let selectBudget = document.getElementById("budgetSelect").value;
-    if (selectBudget = "budget2021") {
-        //window.location.href = "img/budget2021.pdf";
-        window.open("img/budget2021.pdf"); //included code to open in a new window
+    let selectAnnee = document.getElementById("choose__year").value;
+    fetch('http://localhost:8080/api/condos/archives/' + selectAnnee)
+        .then(function (responseServer) {
+            return responseServer.json();
+        })
+        .then(function (messageServer) {
+            for (const obj of messageServer) {
+                const proces = document.querySelector(".budget__post");
+                const procesID = obj.id;
+                const procesTitre = obj.titre;
+                const procesDate = obj.anneeBudgetaire;
+                const procesDocument = obj.document;
+                const procesCopro = obj.copro_id;
+                const procesType = obj.type;
 
-    } else {
-        alert("En construction")
-    }
-}
+                if (procesType == "budget") {
+                    let textBox = document.createElement('div');
+                    textBox.classList.add('accueil__box');
+                    proces.appendChild(textBox);
 
-function afficheAvis() {
-    let selectAvis = document.getElementById("convocSelect").value;
-    if (selectAvis = "avis2021") {
-        //window.location.href = "img/Avis_de_Convocation.pdf";
-        window.open("img/Avis_de_Convocation.pdf"); //included code to open in a new window
+                    let text = document.createElement('div');
+                    text.classList.add('budget__post--text');
 
-    } else {
-        alert("En construction")
-    }
+                    let textTitre = document.createElement('p');
+                    textTitre.innerHTML = procesTitre;
+
+                    let textDate = document.createElement('p');
+                    textDate.innerHTML = 'Date: ' + procesDate;
+
+                    text.appendChild(textTitre);
+                    text.appendChild(textDate);
+
+                    let img = document.createElement('img');
+                    img.src = "./img/icon-download.svg";
+                    let linkText = document.createTextNode(procesDocument);
+                    img.alt = linkText;
+
+                    let a = document.createElement('a');
+                    a.classList.add('title__anchor');
+                    a.href = "archives/" + procesDocument;
+                    a.target = "_blank";
+                    a.rel = "noopener noreferrer";
+                    a.appendChild(img);
+
+                    let box = document.createElement('div');
+                    box.classList.add('soumission-carnet__result--button');
+                    box.appendChild(a);
+                    text.appendChild(box);
+
+                    textBox.appendChild(text);
+                }
+            }
+        })
 }
